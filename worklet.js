@@ -28,6 +28,14 @@ class BGSizePaintWorklet {
 
     ctx.setTransform(ratio, 0, 0, ratio, centerShiftX, centerShiftY);
   }
+
+  getWorkletDimensions(props) {
+    return {
+      width: props.get('--paint-worklet-width').value,
+      height: props.get('--paint-worklet-height').value,
+      scaleMode: props.get('--paint-worklet-scale-mode').value,
+    };
+  }
 }
 
 export { BGSizePaintWorklet };
