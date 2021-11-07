@@ -1,10 +1,12 @@
-const inputProperties = [
-  '--paint-worklet-width',
-  '--paint-worklet-height',
-  '--paint-worklet-scale-mode',
-];
+class BGSizePaintWorklet {
+  static get inputProperties() {
+    return [
+      '--paint-worklet-width',
+      '--paint-worklet-height',
+      '--paint-worklet-scale-mode',
+    ];
+  }
 
-class BaseWorklet {
   scaleContext(
     ctx,
     elementWidth,
@@ -28,4 +30,4 @@ class BaseWorklet {
   }
 }
 
-export { BaseWorklet, inputProperties };
+export { BGSizePaintWorklet };
